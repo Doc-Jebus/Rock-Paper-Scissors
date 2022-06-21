@@ -18,6 +18,8 @@ const buttonPaper = document.querySelector("#button-paper");
 const buttonScissors = document.querySelector("#button-scissors");
 
 buttonRock.addEventListener('click', alert(humanPlayerChoose[0]));
+buttonPaper.addEventListener('click', alert(humanPlayerChoose[1]));
+buttonScissors.addEventListener('click', alert(humanPlayerChoose[2]));
 
 function playGame(playerSelection, computerSelection) {
 
