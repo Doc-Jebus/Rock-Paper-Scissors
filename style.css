@@ -1,0 +1,6 @@
+.main-button-container {
+    display: flex;
+    justify-content: flex-start;
+    gap: 1rem;
+    margin: 3rem;
+}
