@@ -1,13 +1,18 @@
+const playerResults = document.getElementById("player-results");
+const computerResults = document.getElementById("computer-results");
+const resultsTotal = document.getElementById("result");
+let beginGame = document.querySelectorAll("button");
+
 let win = 1;
 let lose = 0;
 
 let computerPlayer
 
-let beginGame = document.querySelectorAll("button");
+
 
 beginGame.forEach(game => game.addEventListener('click', (e) => {
     humanPlayer = e.target.id;
-    console.log(beginGame);
+    playerResults.innerHTML = humanPlayer
 }));
 
 
