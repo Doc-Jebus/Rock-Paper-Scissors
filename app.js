@@ -1,30 +1,33 @@
 let win = 1;
 let lose = 0;
 
-let humanPlayer = ["rock", "paper", "scissors"];
-let computerPlayer = ["ROCK", "PAPER", "SCISSORS"];
+let computerPlayer
 
-const buttonTest = document.querySelector("#test-button");
-function computerPlayer() {
+let beginGame = document.querySelectorAll("button");
+
+beginGame.forEach(game => game.addEventListener('click', (e) => {
+    humanPlayer = e.target.id;
+    console.log(beginGame);
+}));
+
+
+function playGame() {
     
-    let randomComNum = Math.floor(Math.random()*computerPlayer.length);
-    let randomComArray = computerPlayer[randomComNum];
-    console.log(randomComArray);
+    const computerSelection = ()=> {
+        let computerChoose = Math.floor(Math.random()*3)+1;
+        if (computerChoose === 1) {
+            computerPlayer = "rock"
+        }
+        if (computerChoose === 2) {
+            computerPlayer = "paper"
+        }
+        if (computerChoose === 3) {
+            computerPlayer = "scissors"
+        }
+    };
+    console.log(playGame);
 }
-buttonTest.addEventListener('click', computerPlayer);
 
-
-const buttonRock = document.querySelector("#button-rock").value(humanPlayer[0]);
-const buttonPaper = document.querySelector("#button-paper");
-const buttonScissors = document.querySelector("#button-scissors");
-
-function playGame(playerSelection, computerSelection) {
-    let playerSelection = humanPlayer[buttonRock, buttonPaper, buttonScissors];
-    let computerSelection = computerPlayer();
-    alert(playerSelection, computerSelection);
-}
     
-buttonRock.addEventListener('click', playGame);
-buttonPaper.addEventListener('click', playGame);
-buttonScissors.addEventListener('click', playGame);
+
 
